@@ -1,12 +1,8 @@
-import { GameSymbol } from "./game-symbol"
+import { GameSymbol } from "./game-symbol";
 
 export function GameInfo({ isDraw, winnerSymbol, currentStep }) {
   if (isDraw) {
-    return (
-      <div className="mb-2.5">
-        Draw
-      </div>
-    )
+    return <div className="mb-2.5">Draw</div>;
   }
 
   if (winnerSymbol) {
@@ -14,12 +10,12 @@ export function GameInfo({ isDraw, winnerSymbol, currentStep }) {
       <div className="mb-2.5">
         Winner: <GameSymbol symbol={winnerSymbol} />
       </div>
-    )
+    );
   }
 
   return (
     <div className="mb-2.5">
       Turn: <GameSymbol symbol={currentStep} />
     </div>
-  )
+  );
 }
